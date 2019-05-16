@@ -1,19 +1,26 @@
 {
-  "name": "webtrekk-react",
+  "name": "webtrekk-smart-pixel-react",
   "version": "0.1.0",
-  "description": "Webtrekk Tracking for React apps",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "A React implementation of the Webtrekk Smart Pixel.",
+  "main": "./index.js",
+  "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Webtrekk/webtrekk-react.git"
+    "url": "git+https://github.com/Webtrekk/Webtrekk-Smart-Pixel-React.git"
   },
-  "author": "",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "author": "Webtrekk GmbH",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Webtrekk/webtrekk-react/issues"
+    "url": "https://github.com/Webtrekk/Webtrekk-Smart-Pixel-React/issues"
   },
-  "homepage": "https://github.com/Webtrekk/webtrekk-react#readme"
+  "homepage": "https://github.com/Webtrekk/Webtrekk-Smart-Pixel-React#readme",
+  "dependencies": {
+    "webtrekk-smart-pixel": "^1.0.6"
+  },
+  "directories": {
+    "lib": "lib"
+  }
 }
