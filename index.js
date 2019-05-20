@@ -1,4 +1,7 @@
-import webtrekkSmartPixel from "webtrekk-smart-pixel";
+/**
+ * @type {{use: (function(Window, Document): wtSmart)}}
+ */
+const webtrekkSmartPixel = require("webtrekk-smart-pixel");
 import WebtrekkSmartPixelReact from "./lib/smart-pixel-react";
 
 /**

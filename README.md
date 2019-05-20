@@ -38,7 +38,7 @@ export default new ApplicationTracking();
 
 ```js
 var ApplicationTracking = function() {
-	this.init = function() {
+    this.init = function() {
         webtrekkSmartPixelReact.call(function(wtSmart) {
             wtSmart.init.set({
                 trackId: '123451234512345',
