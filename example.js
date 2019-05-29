@@ -1,4 +1,4 @@
-import webtrekkSmartPixelReact from "./debug";
+const webtrekkSmartPixelReact = require("./debug");
 
 /**
  * @constructor
@@ -44,4 +44,4 @@ var ApplicationTracking = function() {
     };
 };
 
-export default new ApplicationTracking();
+module.exports = new ApplicationTracking();
