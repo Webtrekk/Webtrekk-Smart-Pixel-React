@@ -1,16 +1,39 @@
 {
   "name": "webtrekk-smart-pixel-react",
-  "version": "0.2.3",
+  "version": "1.0.0",
   "description": "A React implementation of the Webtrekk Smart Pixel.",
-  "main": "./index.js",
-  "typings": "./doc/namespace.js",
-  "scripts": {},
+  "main": "./lib/index.js",
+  "types": "./types/index.d.ts",
+  "scripts": {
+    "coverage": "node coverage",
+    "install:14": "cross-env REACT_VERSION=14 ./.bin/webtrekk-smart-pixel-react",
+    "install:15": "cross-env REACT_VERSION=15 ./.bin/webtrekk-smart-pixel-react",
+    "install:16": "cross-env REACT_VERSION=16 ./.bin/webtrekk-smart-pixel-react",
+    "install:alpha": "cross-env REACT_VERSION=alpha ./.bin/webtrekk-smart-pixel-react",
+    "install:latest": "cross-env REACT_VERSION=latest ./.bin/webtrekk-smart-pixel-react",
+    "install:next": "cross-env REACT_VERSION=next ./.bin/webtrekk-smart-pixel-react",
+    "test:14": "npm run install:14 && npm run test-only:14",
+    "test:15": "npm run install:15 && npm run test-only:15",
+    "test:16": "npm run install:16 && npm run test-only:16",
+    "test:all": "npm run test:14 && npm run test:15 && npm run test:16",
+    "test:alpha": "npm run install:alpha && npm run test-only:alpha",
+    "test:latest": "npm run install:latest && npm run test-only:latest",
+    "test:next": "npm run install:next && npm run test-only:next",
+    "test:release": "npm run test:all && npm run coverage",
+    "test-only:14": "cross-env REACT_VERSION=14 jest",
+    "test-only:15": "cross-env REACT_VERSION=15 jest",
+    "test-only:16": "cross-env REACT_VERSION=16 jest",
+    "test-only:alpha": "cross-env REACT_VERSION=alpha jest",
+    "test-only:latest": "cross-env REACT_VERSION=latest jest",
+    "test-only:next": "cross-env REACT_VERSION=next jest",
+    "postversion": "git push origin HEAD:master && git push --tags"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Webtrekk/Webtrekk-Smart-Pixel-React.git"
   },
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=8.2.1"
   },
   "author": "Webtrekk GmbH",
   "license": "MIT",
@@ -18,10 +41,32 @@
     "url": "https://github.com/Webtrekk/Webtrekk-Smart-Pixel-React/issues"
   },
   "homepage": "https://github.com/Webtrekk/Webtrekk-Smart-Pixel-React#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.5.5",
+    "@testing-library/react-hooks": "^1.1.0",
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^24.8.0",
+    "babel-preset-react-app": "9.0.0",
+    "cross-env": "^5.2.0",
+    "enzyme": "^3.10.0",
+    "istanbul": "^0.4.5",
+    "jest": "^24.8.0",
+    "prop-types": "^15.6.0",
+    "rimraf": "^2.6.3"
+  },
   "dependencies": {
-    "webtrekk-smart-pixel": "^1.0.6"
+    "webtrekk-smart-pixel": "^1.0.9"
   },
   "directories": {
-    "lib": "lib"
+    "dist": "dist",
+    "lib": "lib",
+    "types": "types"
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
   }
 }
