@@ -1,3 +1,13 @@
+<a name="1.0.0"></a>
+## 1.0.0 (2019-08-12)
+
+### Features
+
+* Support tracking components ([see](./README.md#Components))
+* Support new tracking functionalities ([see](./README.md#WebtrekkSmartPixelReact))
+* Support react hook reducer ([see](./README.md#webtrekkReducer))
+* Support react redux middleware ([see](./README.md#webtrekkMiddleware))
+
 <a name="0.2.3"></a>
 ## 0.2.3 (2019-06-12)
 
