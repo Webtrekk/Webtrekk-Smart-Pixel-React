@@ -1,6 +1,6 @@
 {
   "name": "webtrekk-smart-pixel-react",
-  "version": "0.2.3",
+  "version": "1.0.0",
   "description": "A React implementation of the Webtrekk Smart Pixel.",
   "main": "./lib/index.js",
   "types": "./types/index.d.ts",
