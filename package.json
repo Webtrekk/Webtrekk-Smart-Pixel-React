@@ -1,6 +1,6 @@
 {
   "name": "webtrekk-smart-pixel-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React implementation of the Webtrekk Smart Pixel.",
   "main": "./dist/webtrekk-smart-pixel-react.umd.js",
   "module": "./dist/webtrekk-smart-pixel-react.esm.js",
