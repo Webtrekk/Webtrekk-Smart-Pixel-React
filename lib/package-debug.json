@@ -1,0 +1,21 @@
+{
+  "name": "webtrekk-smart-pixel-react",
+  "version": "0.2.4",
+  "description": "A React implementation of the Webtrekk Smart Pixel.",
+  "main": "./webtrekk-smart-pixel-react.umd.js",
+  "module": "./webtrekk-smart-pixel-react.esm.js",
+  "typings": "./../doc/namespace.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Webtrekk/Webtrekk-Smart-Pixel-React.git"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "author": "Webtrekk GmbH",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Webtrekk/Webtrekk-Smart-Pixel-React/issues"
+  },
+  "homepage": "https://github.com/Webtrekk/Webtrekk-Smart-Pixel-React#readme"
+}
