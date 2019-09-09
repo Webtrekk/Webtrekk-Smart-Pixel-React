@@ -1,9 +1,40 @@
-.idea
-.DS_Store
-/node_modules
-/coverage
+# Node
+node_modules/*
 .npm-*
 *lock*
 *log*
 *.log
 *.lock
+
+# Docs
+docs/*
+
+# Coverage
+coverage/*
+
+# JetBrains
+.idea
+.project
+.settings
+.idea/*
+*.iml
+
+# VS Code
+.vscode/*
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Mac
+.DS_Store
+**/.DS_Store
+
+# Ngc generated files
+**/*.ngfactory.ts
+
+# Build files
+dist/*
+
+# Playground tmp files
+.playground
