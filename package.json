@@ -1,10 +1,14 @@
 {
   "name": "webtrekk-smart-pixel-react",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "A React implementation of the Webtrekk Smart Pixel.",
-  "main": "./index.js",
+  "main": "./dist/webtrekk-smart-pixel-react.umd.js",
+  "module": "./dist/webtrekk-smart-pixel-react.esm.js",
   "typings": "./doc/namespace.js",
-  "scripts": {},
+  "scripts": {
+    "build": "gulp build",
+    "prepare": "npm run build"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Webtrekk/Webtrekk-Smart-Pixel-React.git"
@@ -18,6 +22,15 @@
     "url": "https://github.com/Webtrekk/Webtrekk-Smart-Pixel-React/issues"
   },
   "homepage": "https://github.com/Webtrekk/Webtrekk-Smart-Pixel-React#readme",
+  "devDependencies": {
+    "fs-extra": "^5.0.0",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-rollup": "^2.15.0",
+    "rollup": "^0.49.3",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "run-sequence": "^1.2.2"
+  },
   "dependencies": {
     "webtrekk-smart-pixel": "^1.0.6"
   },
