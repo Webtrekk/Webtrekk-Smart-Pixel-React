@@ -2,6 +2,7 @@ var gulp = require('gulp'),
     path = require('path'),
     rollup = require('gulp-rollup'),
     rename = require('gulp-rename'),
+    babel = require('rollup-plugin-babel'),
     fs = require('fs-extra'),
     runSequence = require('run-sequence');
 
@@ -50,13 +51,19 @@ gulp.task('rollup:esm', function () {
 gulp.task('rollup:umd', function () {
     return gulp.src(`${buildFolder}/**/*.js`)
         .pipe(rollup({
+            plugins: [
+                babel({
+                    exclude: 'node_modules/**'
+                })
+            ],
             input: `${buildFolder}/index.js`,
             allowRealFiles: true,
             external: [
                 'react',
                 'react-router-dom',
                 'prop-types',
-                'webtrekk-smart-pixel'
+                'webtrekk-smart-pixel',
+                'core-js/modules/es6.object.to-string'
             ],
             output: {
                 name: 'webtrekk-smart-pixel-react',
@@ -77,13 +84,19 @@ gulp.task('rollup:umd', function () {
 gulp.task('rollup:amd', function () {
     return gulp.src(`${buildFolder}/**/*.js`)
         .pipe(rollup({
+            plugins: [
+                babel({
+                    exclude: 'node_modules/**'
+                })
+            ],
             input: `${buildFolder}/index.js`,
             allowRealFiles: true,
             external: [
                 'react',
                 'react-router-dom',
                 'prop-types',
-                'webtrekk-smart-pixel'
+                'webtrekk-smart-pixel',
+                'core-js/modules/es6.object.to-string'
             ],
             output: {
                 name: 'webtrekk-smart-pixel-react',
@@ -104,13 +117,19 @@ gulp.task('rollup:amd', function () {
 gulp.task('rollup:cjs', function () {
     return gulp.src(`${buildFolder}/**/*.js`)
         .pipe(rollup({
+            plugins: [
+                babel({
+                    exclude: 'node_modules/**'
+                })
+            ],
             input: `${buildFolder}/index.js`,
             allowRealFiles: true,
             external: [
                 'react',
                 'react-router-dom',
                 'prop-types',
-                'webtrekk-smart-pixel'
+                'webtrekk-smart-pixel',
+                'core-js/modules/es6.object.to-string'
             ],
             output: {
                 name: 'webtrekk-smart-pixel-react',
