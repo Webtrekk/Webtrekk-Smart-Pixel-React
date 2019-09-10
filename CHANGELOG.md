@@ -1,3 +1,13 @@
+<a name="0.2.5"></a>
+## 0.2.5 (2019-09-10)
+
+* Compiling build files into ES5 standard
+
+<a name="0.2.4"></a>
+## 0.2.4 (2019-09-09)
+
+* Build separate files for ESM, UMD, AMD and CJS
+
 <a name="0.2.3"></a>
 ## 0.2.3 (2019-06-12)
 

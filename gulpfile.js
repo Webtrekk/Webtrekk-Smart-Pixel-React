@@ -2,6 +2,7 @@ var gulp = require('gulp'),
     path = require('path'),
     rollup = require('gulp-rollup'),
     rename = require('gulp-rename'),
+    babel = require('rollup-plugin-babel'),
     fs = require('fs-extra'),
     runSequence = require('run-sequence');
 
@@ -52,6 +53,11 @@ gulp.task('rollup:esm', function () {
 gulp.task('rollup:umd', function () {
     return gulp.src(`${buildFolder}/**/*.js`)
         .pipe(rollup({
+            plugins: [
+                babel({
+                    exclude: 'node_modules/**'
+                })
+            ],
             input: `${buildFolder}/index.js`,
             allowRealFiles: true,
             external: [
@@ -73,6 +79,11 @@ gulp.task('rollup:umd', function () {
 gulp.task('rollup:amd', function () {
     return gulp.src(`${buildFolder}/**/*.js`)
         .pipe(rollup({
+            plugins: [
+                babel({
+                    exclude: 'node_modules/**'
+                })
+            ],
             input: `${buildFolder}/index.js`,
             allowRealFiles: true,
             external: [
@@ -94,6 +105,11 @@ gulp.task('rollup:amd', function () {
 gulp.task('rollup:cjs', function () {
     return gulp.src(`${buildFolder}/**/*.js`)
         .pipe(rollup({
+            plugins: [
+                babel({
+                    exclude: 'node_modules/**'
+                })
+            ],
             input: `${buildFolder}/index.js`,
             allowRealFiles: true,
             external: [
@@ -133,6 +149,11 @@ gulp.task('rollup:esm-debug', function () {
 gulp.task('rollup:umd-debug', function () {
     return gulp.src(`${buildFolder}/**/*.js`)
         .pipe(rollup({
+            plugins: [
+                babel({
+                    exclude: 'node_modules/**'
+                })
+            ],
             input: `${buildFolder}/debug.js`,
             allowRealFiles: true,
             external: [
@@ -154,6 +175,11 @@ gulp.task('rollup:umd-debug', function () {
 gulp.task('rollup:amd-debug', function () {
     return gulp.src(`${buildFolder}/**/*.js`)
         .pipe(rollup({
+            plugins: [
+                babel({
+                    exclude: 'node_modules/**'
+                })
+            ],
             input: `${buildFolder}/debug.js`,
             allowRealFiles: true,
             external: [
@@ -175,6 +201,11 @@ gulp.task('rollup:amd-debug', function () {
 gulp.task('rollup:cjs-debug', function () {
     return gulp.src(`${buildFolder}/**/*.js`)
         .pipe(rollup({
+            plugins: [
+                babel({
+                    exclude: 'node_modules/**'
+                })
+            ],
             input: `${buildFolder}/debug.js`,
             allowRealFiles: true,
             external: [
