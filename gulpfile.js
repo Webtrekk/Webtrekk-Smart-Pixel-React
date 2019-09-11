@@ -62,8 +62,7 @@ gulp.task('rollup:umd', function () {
                 'react',
                 'react-router-dom',
                 'prop-types',
-                'webtrekk-smart-pixel',
-                'core-js/modules/es6.object.to-string'
+                'webtrekk-smart-pixel'
             ],
             output: {
                 name: 'webtrekk-smart-pixel-react',
@@ -95,8 +94,7 @@ gulp.task('rollup:amd', function () {
                 'react',
                 'react-router-dom',
                 'prop-types',
-                'webtrekk-smart-pixel',
-                'core-js/modules/es6.object.to-string'
+                'webtrekk-smart-pixel'
             ],
             output: {
                 name: 'webtrekk-smart-pixel-react',
@@ -128,8 +126,7 @@ gulp.task('rollup:cjs', function () {
                 'react',
                 'react-router-dom',
                 'prop-types',
-                'webtrekk-smart-pixel',
-                'core-js/modules/es6.object.to-string'
+                'webtrekk-smart-pixel'
             ],
             output: {
                 name: 'webtrekk-smart-pixel-react',
